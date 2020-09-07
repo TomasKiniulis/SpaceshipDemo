@@ -198,6 +198,7 @@ GameObject:
   - component: {fileID: 6179702686462927890}
   - component: {fileID: 6477854769949503060}
   - component: {fileID: 3599359036091837833}
+  - component: {fileID: 5722499471249688901}
   m_Layer: 0
   m_Name: VirtualCameraManager
   m_TagString: MainCamera
@@ -400,6 +401,7 @@ MonoBehaviour:
     m_BarrelClipping: 0.25
     m_Anamorphism: 0
   flipYMode: 0
+  xrRendering: 1
   fullscreenPassthrough: 0
   allowDynamicResolution: 0
   customRenderingSettings: 0
@@ -462,6 +464,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f22350d987b53b468c6eac2a04e973a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5722499471249688901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3027554877427853619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9459100e7946cb84eb53a26a14473032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ImageComparisonSettings:
+    TargetWidth: 512
+    TargetHeight: 512
+    PerPixelCorrectnessThreshold: 0.0001
+    AverageCorrectnessThreshold: 0.0001
+    UseHDR: 0
+    UseBackBuffer: 0
+    ImageResolution: 0
+  doBeforeTest:
+    m_PersistentCalls:
+      m_Calls: []
+  captureFramerate: 1
+  waitFrames: 550
+  xrCompatible: 1
+  xrThresholdMultiplier: 1
+  renderGraphCompatible: 1
+  checkMemoryAllocation: 1
+  renderPipelineAsset: {fileID: 0}
 --- !u!1 &3429080319467456250
 GameObject:
   m_ObjectHideFlags: 0
@@ -772,6 +804,7 @@ VFXRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

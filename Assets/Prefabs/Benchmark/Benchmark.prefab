@@ -561,7 +561,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2844759636163112434
 Transform:
   m_ObjectHideFlags: 0
@@ -828,6 +828,7 @@ GameObject:
   - component: {fileID: 2844759637140164319}
   - component: {fileID: 2844759637140164313}
   - component: {fileID: 2844759637140164312}
+  - component: {fileID: 4033689771391713375}
   m_Layer: 0
   m_Name: BenchmarkWalkthroughPart01
   m_TagString: Untagged
@@ -870,6 +871,8 @@ PlayableDirector:
     value: {fileID: 85982992156205319}
   - key: {fileID: -90585652589232036, guid: c83e008db5dbb494cb0b484f5132f337, type: 2}
     value: {fileID: 0}
+  - key: {fileID: -2259353849704971959, guid: c83e008db5dbb494cb0b484f5132f337, type: 2}
+    value: {fileID: 2844759637140164318}
   m_ExposedReferences:
     m_References: []
 --- !u!95 &2844759637140164312
@@ -891,6 +894,36 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4033689771391713375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2844759637140164318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 901af2f2af7b4474b9ae9088a239fbb2, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 5082989516982580277}
+          m_TargetAssemblyTypeName: CaptureScreenshot, HDRP_TestRunner
+          m_MethodName: TakeScreenshot
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2844759637480249413
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,6 +934,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2844759637480249415}
   - component: {fileID: 2844759637480249414}
+  - component: {fileID: 5082989516982580277}
   m_Layer: 0
   m_Name: Benchmark
   m_TagString: Untagged
@@ -937,6 +971,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Color: {r: 1, g: 0.52464867, b: 0.4575472, a: 1}
+--- !u!114 &5082989516982580277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2844759637480249413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a93eee230da98fb40b03ba57935c3b81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3857677089710893410
 GameObject:
   m_ObjectHideFlags: 0
@@ -998,6 +1044,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1236,6 +1283,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetMoveSpeed
         m_Mode: 4
         m_Arguments:
@@ -1247,6 +1295,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetPaused
         m_Mode: 6
         m_Arguments:
